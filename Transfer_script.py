@@ -145,7 +145,7 @@ def main():
         while not repeat:
             get_gcs_objects(google_access_key_id, google_access_key_secret, temp[i]['bucketName'],
                             temp[i]['objectName'])
-            obj = boto3.resource("s3").Object("gcloudtos3test", temp[i]['objectName'])
+            obj = boto3.resource("s3").Object("", temp[i]['objectName'])
             repeat = etag_compare(obj.e_tag, temp[i]['md5Hash'])
     temp = export2['cloudStorageSink']['files']
     for i in range(len(temp)):
