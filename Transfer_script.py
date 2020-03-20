@@ -109,7 +109,7 @@ def get_gcs_objects(google_access_id, google_access_secret, gc_bucket_name, gc_o
                            endpoint_url="https://storage.googleapis.com",
                            aws_access_key_id=google_access_id,
                            aws_secret_access_key=google_access_secret)
-    object1 = s3.Object('gcloudtos3test', gc_object_name)
+    object1 = s3.Object('googlevault-test-it', gc_object_name)
     f = io.BytesIO()
     client1.download_fileobj(gc_bucket_name, gc_object_name, f)
     print("Hello")
