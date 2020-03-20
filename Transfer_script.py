@@ -112,6 +112,7 @@ def get_gcs_objects(google_access_id, google_access_secret, gc_bucket_name, gc_o
     object1 = s3.Object('gcloudtos3test', gc_object_name)
     f = io.BytesIO()
     client1.download_fileobj(gc_bucket_name, gc_object_name, f)
+    print("Hello")
     object1.put(Body=f.getvalue())
 
 
